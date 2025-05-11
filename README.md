@@ -18,7 +18,7 @@ This project retrieves Pokémon data from the PokéAPI and outputs it in JSON fo
 
 ## Instructions
 
-**1.  Using Docker**
+**1.  To create a new docker image using given Dockerfile**
 
 * Clone this repository.
 
@@ -30,10 +30,20 @@ This project retrieves Pokémon data from the PokéAPI and outputs it in JSON fo
 * Build the Docker image:
 
         
-        e.g., docker build -t pokemon-app:v1.1 .
+        docker build -t pokemon-app:v1.1 .
         
         
 * Run the container, providing the Pokémon name as an argument:
 
   
-        e.g., docker run pokemon-app:v1.1 python3 pokemon_fetcher.py ditto
+        docker run pokemon-app:v1.1 python3 pokemon_fetcher.py ditto
+
+
+**2.  To create a container using existing docker image**
+
+* create a container:
+
+        
+        docker run arun1771/pokemon:v1 python3 pokemon_fetcher.py ditto
+
+  
